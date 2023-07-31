@@ -24,6 +24,10 @@ app.get("/app/login",(req,res)=>{
 
 
 // API Endpnits
+app.post("/api",(req,res)=>{
+    res.send("Welcome to API")
+})
+
 app.post("/api/login",(req,res)=>{
     res.send("You are requesting for Login API")
 })
@@ -57,6 +61,10 @@ app.get("/api/products",(req,res)=>{
 
 
 // Logs Endpoints
+app.get("/logs",(req,res)=>{
+    res.send("Welcome to Logs")
+})
+
 app.get("/logs/order/:orderid",(req,res)=>{
     res.send("Fetching logs for latest order no. "+req.params.orderid)
 })

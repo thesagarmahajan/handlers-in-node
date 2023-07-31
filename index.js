@@ -5,6 +5,10 @@ app.listen(port, ()=>{
     console.log(`Listening on port no: ${port}`)
 })
 
+app.get("/",(req,res)=>{
+    res.sendFile(`${__dirname}/static/welcome.html`)
+})
+
 // App Endpoints
 app.get("/app",(req,res)=>{
     res.send("Welcome to App")
@@ -20,11 +24,11 @@ app.get("/app/login",(req,res)=>{
 
 
 // API Endpnits
-app.get("/api/login",(req,res)=>{
+app.post("/api/login",(req,res)=>{
     res.send("You are requesting for Login API")
 })
 
-app.get("/api/Signup",(req,res)=>{
+app.post("/api/Signup",(req,res)=>{
     res.send("You are requesting for Signup API")
 })
 

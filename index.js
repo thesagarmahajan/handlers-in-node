@@ -91,10 +91,10 @@ app.get("/api/products",(req,res)=>{
 
 
 // Logs Endpoints
-app.get("/mylogs",(req,res)=>{
+app.get("/logs",(req,res)=>{
     res.send(`<h1>Welcome to Logs FROM ${ipAddress}</h1>`)
 })
 
-app.get("/mylogs/order/:orderid",(req,res)=>{
+app.get("/logs/order/:orderid",(req,res)=>{
     res.send(`<h1>Fetching logs for latest order no. ${req.params.orderi} FROM ${ipAddress}</h1>`)
 })
